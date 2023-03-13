@@ -10,4 +10,4 @@ jobs:
           command: node helloWorld.js
       - run:
           name: Check Path
-          command: ls
+          command: pwd
