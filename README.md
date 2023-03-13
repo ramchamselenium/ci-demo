@@ -8,3 +8,7 @@
     run: npm install
     Create fork
     Run via https://app.circleci.com/pipelines/github/<'your github username'>/ci-demo
+
+## Branch "docker":
+
+    Sample run for docker and circleci image. 
