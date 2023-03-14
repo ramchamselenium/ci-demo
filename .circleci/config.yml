@@ -3,6 +3,9 @@ jobs:
   build:
     docker:
       - image: circleci/node:12.16.2-browsers
+        auth:
+          username: ramchampogi
+          password: $dockerhubpassword # context / project UI env-var reference
     steps:
       - checkout
       - run:
