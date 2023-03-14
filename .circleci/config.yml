@@ -18,6 +18,13 @@ jobs:
           
 workflows:
   build:
+    triggers:
+      - schedule:
+          cron: "0 * * * *"
+           filters:
+            branches:
+             only:
+               - main  
     jobs:
       - build:
           context: dockerhub
