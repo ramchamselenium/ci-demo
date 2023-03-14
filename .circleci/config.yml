@@ -5,7 +5,7 @@ jobs:
       - image: circleci/node:18.15.0
         auth:
           username: ramchampogi
-          password: $dockerhubpassword # context / project UI env-var reference
+          password: $dockerhubpassword 
     steps:
       - checkout
       - run:
@@ -14,3 +14,8 @@ jobs:
       - run:
           name: Check Path
           command: pwd
+workflows:
+  build:
+    jobs:
+      - build:
+          context: dockerhub
