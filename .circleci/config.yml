@@ -14,15 +14,14 @@ jobs:
           command: pwd
 
 workflows:
-  build:
-    triggers:
-      - schedule:
-          cron: "0 * * * *"
-           filters:
-            branches:
-             only:
-               - main
-               - cron 
   workflow-name:
+  triggers:
+    - schedule:
+        cron: "0 * * * *"
+          filters:
+            branches:
+              only:
+                - main
+                - cron 
     jobs:
       - build
