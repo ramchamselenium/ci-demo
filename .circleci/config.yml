@@ -4,7 +4,7 @@ jobs:
   build:
     docker:
       - image: circleci/node:16.10.0
-    working_directory: ~/test
+    working_directory: ~/test # https://circleci.com/docs/configuration-reference/?query=CIRCLE_WORKING_DIRECTORY
     steps:
       - checkout
       - run:
@@ -16,7 +16,7 @@ jobs:
   test:
     docker:
       - image: circleci/node:16.10.0
-    working_directory: ~/test
+    working_directory: ~/test # https://circleci.com/docs/configuration-reference/?query=CIRCLE_WORKING_DIRECTORY
     steps:
       - checkout
       - run:
