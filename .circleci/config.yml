@@ -6,7 +6,7 @@ jobs:
       - image: circleci/node:18.15.0
         auth:
           username: ramchampogi
-          password: $dockerhubpassword 
+          password: $hubdocker
     steps:
       - checkout
       - run:
