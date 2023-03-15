@@ -17,14 +17,25 @@ workflows:
   workflow-name:
     jobs:
       - build
-  nightly:
+
+  cron:
     triggers:
       - schedule:
           cron: "0 * * * *"
           filters:
             branches:
               only:
-                - main
                 - cron
+    jobs:
+      - build
+
+  nightly:
+    triggers:
+      - schedule:
+          cron: "0 0 * * *"
+          filters:
+            branches:
+              only:
+                - main
     jobs:
       - build
