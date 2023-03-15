@@ -14,9 +14,6 @@ jobs:
           command: pwd
 
 workflows:
-  workflow-name:
-    jobs:
-      - build
   nightly:
     triggers:
       - schedule:
@@ -26,3 +23,5 @@ workflows:
               only:
                 - main
                 - cron
+    jobs:
+      - build
