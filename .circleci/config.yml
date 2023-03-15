@@ -3,10 +3,7 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: circleci/node:18.15.0
-        auth:
-          username: ramchampogi
-          password: $dockerhubpassword 
+      - image: circleci/node:16.10.0
     steps:
       - checkout
       - run:
@@ -15,7 +12,7 @@ jobs:
       - run:
           name: Check Path
           command: pwd
-          
+
 workflows:
   build:
     triggers:
@@ -24,7 +21,8 @@ workflows:
            filters:
             branches:
              only:
-               - main  
+               - main
+               - cron 
+  workflow-name:
     jobs:
-      - build:
-          context: dockerhub
+      - build
