@@ -4,9 +4,6 @@ jobs:
   build:
     docker:
       - image: circleci/node:16.10.0
-        auth:
-          username: ramchampogi
-          password: $hubdockerx
     steps:
       - checkout
       - run:
@@ -15,9 +12,3 @@ jobs:
       - run:
           name: Check Path
           command: pwd
-          
-workflows:
-  build:
-    jobs:
-      - build:
-          context: dockerhub
