@@ -15,13 +15,13 @@ jobs:
 
 workflows:
   workflow-name:
-  triggers:
-    - schedule:
-        cron: "0 * * * *"
-          filters:
-            branches:
-              only:
+    triggers:
+      - schedule:
+         cron: "0 0 * * *"
+         filters:
+           branches:
+             only:
                 - main
-                - cron 
+                - cron
     jobs:
       - build
