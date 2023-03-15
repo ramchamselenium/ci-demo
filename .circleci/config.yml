@@ -15,7 +15,7 @@ jobs:
 
 workflows:
   workflow-name:
-  triggers:
+    triggers:
     - schedule:
         cron: "0 * * * *"
           filters:
