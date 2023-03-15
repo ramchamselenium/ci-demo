@@ -15,12 +15,13 @@ jobs:
 
 workflows:
   workflow-name:
+  nightly:
     triggers:
       - schedule:
-         cron: "0 0 * * *"
-         filters:
-           branches:
-             only:
+          cron: "0 0 * * *"
+          filters:
+            branches:
+              only:
                 - main
                 - cron
     jobs:
