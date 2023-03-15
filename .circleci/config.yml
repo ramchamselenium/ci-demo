@@ -12,11 +12,23 @@ jobs:
       - run:
           name: Check Path
           command: pwd
+  test:
+    docker:
+      - image: circleci/node:16.10.0
+    steps:
+      - checkout
+      - run:
+          name: Run Hello World
+          command: node helloWorld.js
+      - run:
+          name: Check Path
+          command: pwd
 
 workflows:
   workflow-name:
     jobs:
       - build
+      - test
 
   cron:
     triggers:
