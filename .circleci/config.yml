@@ -1,11 +1,11 @@
-version: 2.1
+version: 2
 
 jobs:
   build:
     docker:
       - image: circleci/node:16.10.0
       - image: selenium/standalone-chrome:3.11.0
-    working_directory: ~/test # https://circleci.com/docs/configuration-reference/?query=CIRCLE_WORKING_DIRECTORY
+    working_directory: ~/repo # https://circleci.com/docs/configuration-reference/?query=CIRCLE_WORKING_DIRECTORY
     steps:
       - checkout
       - run:
@@ -18,7 +18,7 @@ jobs:
     docker:
       - image: circleci/node:16.10.0
       - image: selenium/standalone-chrome:3.11.0
-    working_directory: ~/test # https://circleci.com/docs/configuration-reference/?query=CIRCLE_WORKING_DIRECTORY
+    working_directory: ~/repo # https://circleci.com/docs/configuration-reference/?query=CIRCLE_WORKING_DIRECTORY
     steps:
       - checkout
       - run:
