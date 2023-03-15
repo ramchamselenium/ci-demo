@@ -28,7 +28,9 @@ workflows:
   workflow-name:
     jobs:
       - build
-      - test
+      - test:
+        requires:
+          - build
 
   cron:
     triggers:
