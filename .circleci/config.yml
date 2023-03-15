@@ -4,7 +4,7 @@ jobs:
   build:
     docker:
       - image: circleci/node:16.10.0
-      - image: mongo:4.2.0
+      - image: selenium/standalone-chrome:3.11.0
     # working_directory: ~/test # https://circleci.com/docs/configuration-reference/?query=CIRCLE_WORKING_DIRECTORY
     steps:
       - checkout
@@ -17,7 +17,7 @@ jobs:
   test:
     docker:
       - image: circleci/node:16.10.0
-      - image: mongo:4.2.0
+      - image: selenium/standalone-chrome:3.11.0
     # working_directory: ~/test # https://circleci.com/docs/configuration-reference/?query=CIRCLE_WORKING_DIRECTORY
     steps:
       - checkout
