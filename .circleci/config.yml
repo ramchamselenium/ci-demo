@@ -12,3 +12,8 @@ jobs:
       - run:
           name: Check Path
           command: pwd
+
+workflows:
+  workflow-name:
+    jobs:
+      - build
