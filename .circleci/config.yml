@@ -29,6 +29,7 @@ jobs:
           command: pwd
 
 workflows:
+  version: 2
   workflow-name:
     jobs:
       - build
