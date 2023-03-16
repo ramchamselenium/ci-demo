@@ -8,6 +8,7 @@ jobs:
     working_directory: ~/repo # https://circleci.com/docs/configuration-reference/?query=CIRCLE_WORKING_DIRECTORY
     steps:
       - checkout
+      - setup_remote_docker
       - run:
           name: Run Hello World
           command: node helloWorld.js
@@ -21,6 +22,7 @@ jobs:
     working_directory: ~/repo # https://circleci.com/docs/configuration-reference/?query=CIRCLE_WORKING_DIRECTORY
     steps:
       - checkout
+      - setup_remote_docker
       - run:
           name: Run Hello World
           command: node helloWorld.js
