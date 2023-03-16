@@ -3,8 +3,8 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/node:10
-      - image: selenium/hub:3.141.59-iron
+      - image: circleci/node:7.10
+      - image: selenium/standalone-chrome:3.11.0
     working_directory: ~/repo # https://circleci.com/docs/configuration-reference/?query=CIRCLE_WORKING_DIRECTORY
     steps:
       - checkout
@@ -16,8 +16,8 @@ jobs:
           command: pwd
   test:
     docker:
-      - image: circleci/node:10
-      - image: selenium/hub:3.141.59-iron
+      - image: circleci/node:7.10
+      - image: selenium/standalone-chrome:3.11.0
     working_directory: ~/repo # https://circleci.com/docs/configuration-reference/?query=CIRCLE_WORKING_DIRECTORY
     steps:
       - checkout
