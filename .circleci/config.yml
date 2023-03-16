@@ -1,10 +1,10 @@
-version: 2.1
+version: 2
 
 jobs:
   build:
     docker:
-      - image: circleci/node:16.10.0
-      - image: mongo:6.0.5
+      - image: circleci/node:10
+      - image: selenium/hub:3.141.59-iron
     working_directory: ~/repo # https://circleci.com/docs/configuration-reference/?query=CIRCLE_WORKING_DIRECTORY
     steps:
       - checkout
@@ -16,8 +16,8 @@ jobs:
           command: pwd
   test:
     docker:
-      - image: circleci/node:16.10.0
-      - image: mongo:6.0.5
+      - image: circleci/node:10
+      - image: selenium/hub:3.141.59-iron
     working_directory: ~/repo # https://circleci.com/docs/configuration-reference/?query=CIRCLE_WORKING_DIRECTORY
     steps:
       - checkout
